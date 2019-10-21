@@ -1,4 +1,52 @@
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+  *, *:before, *:after {
+    box-sizing: border-box;
+}
+  
+/* HEAD AREA */
 body {
-    color: brown;
-    background: burlywood;
+    color: white;
+    background: black;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    height: 85vh;
+}
+
+#link {
+    background: white;
+}
+
+
+/* FOOTER AREA */
+.end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+@media only screen and (min-width: 600px) {
+    .options {
+        justify-content: flex-start;
+        align-content: space-around;
+        flex-wrap: nowrap;
+        padding-left: 2rem;
+    }
+}
+
+
+/* FOOTER AREA */
+.end {
+    justify-content: flex-start;
+    padding-left: 3rem;
 }

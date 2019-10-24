@@ -10,6 +10,7 @@ html {
 body {
     color: white;
     background: black;
+    min-height: 100vh;
 }
 
 .options {
@@ -21,8 +22,18 @@ body {
     height: 85vh;
 }
 
+.logo {
+    padding-bottom: 20px;
+}
+
+.title p {
+    padding-bottom: 10px;
+    font-size: 16px;
+}
 #link {
     background: white;
+    width: 100%;
+    text-align: center;
 }
 
 
@@ -31,7 +42,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    color: #c2c2c2;
+    padding-top: 3rem;
 }
 
 

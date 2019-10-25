@@ -1,0 +1,50 @@
+body {
+    color: $font-color;
+    background: $primary-color;
+    min-height: 100vh;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    height: 85vh;
+
+    @include tablet {
+        justify-content: flex-start;
+        align-content: space-around;
+        flex-flow: row nowrap;
+        padding-left: 2rem;
+    }
+
+        .logo {
+            padding-bottom: 20px;
+        }
+        .title {
+            p {
+                padding-bottom: 10px;
+                font-size: $size;
+            }
+        }
+        #link {
+            background: $font-color;
+            width: 100%;
+            text-align: center;
+        }
+}
+
+//FOOTER AREA
+.end {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: $footer;
+    padding-top: 3rem;
+
+    @include tablet {
+        justify-content: flex-start;
+        padding-left: 3rem;
+    }
+}

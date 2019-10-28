@@ -1,7 +1,7 @@
-let tmpSubject;
 
 document.addEventListener('DOMContentLoaded', function (event){
-    $('#link').on('change', function(){
+    let tmpSubject;
+     $('#link').on('change', function(){
         event.preventDefault();
         tmpSubject = $(this).val();
         $.ajax({
@@ -14,9 +14,25 @@ document.addEventListener('DOMContentLoaded', function (event){
             console.log(data.results);
             let container = $('#article-list')
             $.each(data.results, function(key, value) {
-                console.log(value.multimedia[4]).url
-                $('#article-list').append
-            })
+                console.log(value.multimedia[4].url);
+                if(value.multimedia[0]==undefined || value.multimedia[0]==null){
+                    console.log("Hello");
+                }
+                console.log(key);
+                $('#article-list').append(`
+
+                
+                    <li>
+                    <div style="background-image:url(${value.multimedia[4].url})">   
+                    <a href="">
+                            <p>${value.abstract}</p>    
+                        </a>
+                       </div>
+                    </li>
+                `);
+
+                
+            });// .each
         })
     })
 });

@@ -81,6 +81,19 @@ body {
     width: 100%;
     text-align: center; }
 
+.grid-container {
+  display: -webkit-box;
+  display: flex;
+  justify-content: space-around;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap; }
+  .grid-container .article-list-item {
+    min-height: 420px;
+    background-size: cover; }
+
 .end {
   display: -webkit-box;
   display: flex;

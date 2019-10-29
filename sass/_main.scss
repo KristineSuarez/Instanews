@@ -35,6 +35,20 @@ body {
         }
 }
 
+//ARTICLES
+.grid-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+
+    .article-list-item {
+        min-height: 420px;
+        background-size: cover;
+        // min-width: 100vw;
+    }
+}
+
 //FOOTER AREA
 .end {
     display:flex;

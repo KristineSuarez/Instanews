@@ -36,17 +36,41 @@ body {
 }
 
 //ARTICLES
-.grid-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: row wrap;
-
-    .article-list-item {
-        min-height: 420px;
-        background-size: cover;
-        // min-width: 100vw;
+.article-list {
+    @include tablet {
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: 1fr 1fr;
     }
+
+    @include desktop {
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .article-list-item {
+        background-size: cover;
+        background-position: 50%;
+        min-height: 420px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, 1fr);
+        position: relative;
+    }
+        .article-page {
+            text-decoration: none;
+            color: $font-color;
+            position: absolute;
+            bottom: 0;
+              
+
+            .article {
+                background: rgba(0, 0, 0, 0.6);
+                // position: ;
+            }
+        }
+
+
+
 }
 
 //FOOTER AREA

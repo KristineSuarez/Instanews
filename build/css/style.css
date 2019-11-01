@@ -45,11 +45,21 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
 body {
   color: #FFFFFF;
   background: black;
   min-height: 100vh;
   font-family: "Open Sans", sans-serif; }
+
+p {
+  font-weight: 300; }
 
 .loader {
   position: absolute;
@@ -126,7 +136,8 @@ body {
     position: absolute;
     bottom: 0; }
     .article-list .article-list-item .article-page .article {
-      background: rgba(0, 0, 0, 0.6); }
+      background: rgba(0, 0, 0, 0.6);
+      line-height: 1.5rem; }
 
 .end {
   display: -webkit-box;

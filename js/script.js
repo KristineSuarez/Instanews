@@ -46,8 +46,12 @@ document.addEventListener('DOMContentLoaded', function (event){
                 
                 
             });
-        })
-    })
+        }).fail(function () {
+            console.log ('something did not work?');
+        }).always(function(){
+            $('.loader').removeClass('is-active');
+        });
+    });
 });
 
 

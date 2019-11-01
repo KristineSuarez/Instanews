@@ -4,20 +4,13 @@ document.addEventListener('DOMContentLoaded', function (event){
     // const = $('.loader');
      $('#link').on('change', function(){
         event.preventDefault();
+        $('.loader').show()
         tmpSubject = $(this).val();
         $.ajax({
             method: 'GET',
             dataType: 'JSON',
             url: 'https://api.nytimes.com/svc/topstories/v2/'+ tmpSubject+'.json?api-key=VBGBP5ATc6Rgv8j8nrYEdyH1zVlNDA8U' 
         })
-        //  $('.loader')
-        //      .hide()  // Hide it initially
-        //      .ajaxStart(function () {
-        //          $(this).show();
-        //      })
-        //      .ajaxStop(function () {
-        //          $(this).hide();
-        //      })
 
         .done(function(data){
             console.log(data);
@@ -26,7 +19,12 @@ document.addEventListener('DOMContentLoaded', function (event){
                 return articleObj.multimedia[4] !== undefined;
             }).slice(0,12);
 
+            $('.loader').hide();
+
             $('.article-list').empty();
+
+            $('.options').addClass('options-small')
+            $('.base-state').addClass('logo-small');
 
             let container = $('#article-list')
             $.each(slicedResults, function(key, value) {
@@ -47,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function (event){
                 `);
                 
                 
-            });// .each
+            });
         })
     })
 });

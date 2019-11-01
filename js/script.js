@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function (event){
     let tmpSubject;
+    // const = $('.loader');
      $('#link').on('change', function(){
         event.preventDefault();
         tmpSubject = $(this).val();
@@ -9,6 +10,15 @@ document.addEventListener('DOMContentLoaded', function (event){
             dataType: 'JSON',
             url: 'https://api.nytimes.com/svc/topstories/v2/'+ tmpSubject+'.json?api-key=VBGBP5ATc6Rgv8j8nrYEdyH1zVlNDA8U' 
         })
+        //  $('.loader')
+        //      .hide()  // Hide it initially
+        //      .ajaxStart(function () {
+        //          $(this).show();
+        //      })
+        //      .ajaxStop(function () {
+        //          $(this).hide();
+        //      })
+
         .done(function(data){
             console.log(data);
 

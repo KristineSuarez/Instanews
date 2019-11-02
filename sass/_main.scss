@@ -19,10 +19,8 @@ p{
 
 .loader {
     position: absolute;
-    // top: 0;
     top: 50vh;
     left: 50vw;
-    // bottom: 50%;
     transform: translate(-50%, -50%);
     width: 5rem;
 }
@@ -104,9 +102,6 @@ p{
             .article {
                 background: rgba(0, 0, 0, 0.6);
                 line-height: 1.5rem;
-                // height: 80px;
-                // min-width: 90vw;
-                // text-align: left;
             }
         }
     }

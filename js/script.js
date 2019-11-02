@@ -1,7 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function (event){
     let tmpSubject;
-    // const = $('.loader');
      $('#link').on('change', function(){
         event.preventDefault();
         $('.loader').show()
@@ -28,12 +27,6 @@ document.addEventListener('DOMContentLoaded', function (event){
 
             let container = $('#article-list')
             $.each(slicedResults, function(key, value) {
-                // console.log(value.multimedia[4].url);
-                // if(value.multimedia[4]==undefined || value.multimedia[4]==null){
-                //     console.log("undefine or empty multimedia");
-                //     return;
-                // }
-                // console.log(value.multimedia[4].url);
                 $('.article-list').append(`
                     <li class="article-list-item" style="background-image:url(${value.multimedia[4].url})">
                         <a class="article-page" href="${value.url}" target="_blank">
@@ -47,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function (event){
                 
             });
         }).fail(function () {
-            console.log ('something did not work?');
+            console.log('something did not work?');
         }).always(function(){
             $('.loader').removeClass('is-active');
         });

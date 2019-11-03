@@ -106,7 +106,7 @@ p {
   .options .title p {
     padding-bottom: 10px;
     font-size: 16px; }
-  .options #link {
+  .options .link {
     background: #FFFFFF;
     width: 100%;
     text-align: center; }
@@ -129,12 +129,35 @@ p {
   min-height: 420px;
   display: grid;
   grid-template-columns: 1fr;
-  position: relative; }
+  position: relative;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1); }
+  .article-list .article-list-item:hover {
+    -webkit-filter: none;
+            filter: none; }
+  @media (min-width: 600px) {
+    .article-list .article-list-item:hover {
+      -webkit-filter: none;
+              filter: none; } }
+  @media (min-width: 1000px) {
+    .article-list .article-list-item:hover {
+      -webkit-filter: none;
+              filter: none; } }
   .article-list .article-list-item .article-page {
     text-decoration: none;
     color: #FFFFFF;
     position: absolute;
-    bottom: 0; }
+    bottom: 0;
+    text-align: center;
+    min-width: 100vw; }
+    @media (min-width: 600px) {
+      .article-list .article-list-item .article-page {
+        text-align: center;
+        min-width: auto; } }
+    @media (min-width: 1000px) {
+      .article-list .article-list-item .article-page {
+        text-align: center;
+        min-width: auto; } }
     .article-list .article-list-item .article-page .article {
       background: rgba(0, 0, 0, 0.6);
       line-height: 1.5rem; }

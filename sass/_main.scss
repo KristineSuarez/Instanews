@@ -60,7 +60,7 @@ p{
                 font-size: $size;
             }
         }
-        #link {
+        .link {
             background: $font-color;
             width: 100%;
             text-align: center;
@@ -76,6 +76,7 @@ p{
 
 //ARTICLES
 .article-list {
+
     @include tablet {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -84,6 +85,7 @@ p{
     @include desktop {
         grid-template-columns: repeat(4,1fr);
     }
+        
     .article-list-item {
         background-size: cover;
         background-position: 50%;
@@ -91,23 +93,57 @@ p{
         display: grid;
         grid-template-columns: 1fr;
         position: relative;
+        filter: grayscale(1);
+
+            &:hover {
+                filter: none;
+            }
+
+            @include tablet {
+                &:hover {
+                    filter: none;
+                }
+            }
+
+            @include desktop {
+                &:hover {
+                    filter: none;
+                }
+            }
+
     
         .article-page {
             text-decoration: none;
             color: $font-color;
             position: absolute;
             bottom: 0;
-              
+            text-align: center;
+            min-width: 100vw;
+                // display: none;
 
+                // &:hover {
+                //     // display: block;
+                //     transform: translateY(1);
+                // }
+
+            @include tablet {
+                text-align: center;
+                min-width: auto;
+            }
+
+            @include desktop {
+                text-align: center;
+                min-width: auto;
+            }
+              
             .article {
                 background: rgba(0, 0, 0, 0.6);
                 line-height: 1.5rem;
             }
         }
     }
-
-
 }
+
 
 //FOOTER AREA
 .end {

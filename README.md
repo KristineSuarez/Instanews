@@ -8,8 +8,20 @@
 
 - Learned to use SCSS to style layout more efficiently, and combine mixins, variables, reset and main sheet.
 
-- Retrieve data from NYT API using ajax "GET" method and the use of jQuery and JS to append articles to the website.
+- Retrieve data from NYT API using ajax "GET" method and the use of jQuery and javaScript to append articles to the website.
 
+- My personal understanding of the languages used are improving as I practice more with the projects.
+
+
+### Technology Used
+
+- HTML5
+- CSS3
+- SCSS
+- Gulp
+- Node.js
+- javaScript
+- jQuery
 
 
 

@@ -67,11 +67,9 @@ p{
         }
 }
 
-// only after articles are loaded
 .options-small {
     height: 290px;
 }
-
 
 
 //ARTICLES
@@ -119,12 +117,6 @@ p{
             bottom: 0;
             text-align: center;
             min-width: 100vw;
-                // display: none;
-
-                // &:hover {
-                //     // display: block;
-                //     transform: translateY(1);
-                // }
 
             @include tablet {
                 text-align: center;
